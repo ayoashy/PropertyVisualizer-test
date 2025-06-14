@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'gilroy-regular';
+  src: url('./fonts/gilroy-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-sway {
+  animation: sway 3s ease-in-out infinite;
+}
+
+@import "tailwindcss";
+
+
+
+@theme {
+/* breakpoints */
+  --breakpoint-xs: 25.625rem; /* 410px */
+  --breakpoint-sm: 40rem; /* 640px (Default) */
+  --breakpoint-md: 48rem; /* 768px (Default) */
+  --breakpoint-lg: 64rem; /* 1024px (Default) */
+  --breakpoint-xl: 80rem; /* 1280px (Default) */
+  --breakpoint-2xl: 90rem; /* 1440px (Custom) */
+  /* colors */
+  --color-primary: #20308c;
+  --color-secondary: #ef5d5e;
+  /* fonts */
+  --font-gilroy-regular: 'gilroy-regular';
+
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
+  --animate-slideUp: slideUp 0.5s ease-in-out;
+  --animate-width: width 0.5s ease-in-out;
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-float: float 3s ease-in-out infinite;
+
+}
